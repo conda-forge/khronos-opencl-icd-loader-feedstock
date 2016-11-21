@@ -33,7 +33,6 @@ conda search khronos-opencl-icd-loader --channel conda-forge
 ```
 
 
-
 About conda-forge
 =================
 
