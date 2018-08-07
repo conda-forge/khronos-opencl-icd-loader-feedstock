@@ -18,7 +18,7 @@ source:
   - add-cmake-install.patch
 
 build:
-  number: 0
+  number: 1
 
   # We've got ocl-icd on Linux and the built-in loader on OS X.  No need to use
   # this ... fantastic piece of software ... anywhere else.
@@ -27,6 +27,8 @@ build:
 requirements:
   build:
     - cmake
+    - {{ compiler('c') }}
+  host:
     - python
 
 test:
