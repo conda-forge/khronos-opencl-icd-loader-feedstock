@@ -18,7 +18,7 @@ source:
   - add-cmake-install.patch
 
 build:
-  number: 1
+  number: 1001
 
   # We've got ocl-icd on Linux and the built-in loader on OS X.  No need to use
   # this ... fantastic piece of software ... anywhere else.
