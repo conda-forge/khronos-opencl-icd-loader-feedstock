@@ -26,6 +26,9 @@ build:
   # this ... fantastic piece of software ... anywhere else.
   skip: true  # [linux]
 
+  # new versions don't support older MSVC
+  skip: true  # [win and vc<14]
+
 requirements:
   build:
     - cmake
