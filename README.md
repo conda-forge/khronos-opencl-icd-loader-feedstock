@@ -14,9 +14,9 @@ Summary: A driver loader for OpenCL
 Current build status
 ====================
 
+[![OSX](https://img.shields.io/travis/conda-forge/khronos-opencl-icd-loader-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/khronos-opencl-icd-loader-feedstock)
 [![Windows](https://img.shields.io/appveyor/ci/conda-forge/khronos-opencl-icd-loader-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/khronos-opencl-icd-loader-feedstock/branch/master)
 ![Linux disabled](https://img.shields.io/badge/linux-disabled-lightgrey.svg)
-![OSX disabled](https://img.shields.io/badge/OSX-disabled-lightgrey.svg)
 
 Current release info
 ====================
