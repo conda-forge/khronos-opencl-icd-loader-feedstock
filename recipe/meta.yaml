@@ -24,13 +24,15 @@ build:
   # We've got ocl-icd on Linux. No need to use
   # this ... fantastic piece of software ... anywhere else.
   skip: true  # [linux]
+  skip: true  # [win and vc<14]
 
 requirements:
   build:
     - cmake
     - {{ compiler('c') }}
-  host:
     - python
+  host:
+  run:
 
 test:
   commands:
