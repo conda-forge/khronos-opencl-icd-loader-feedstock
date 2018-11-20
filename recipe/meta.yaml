@@ -14,7 +14,6 @@ source:
     patches:
     # Khronos doesn't have an install target in their CMake. Add one.
     - add-cmake-install.patch
-    - cfgmgr.diff
 
   - url: https://github.com/KhronosGroup/OpenCL-Headers/archive/{{ headers_version }}.zip
     sha256: {{ headers_sha256 }}
