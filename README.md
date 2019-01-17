@@ -1,3 +1,7 @@
+<!--
+# -*- mode: jinja -*-
+-->
+
 About khronos-opencl-icd-loader
 ===============================
 
@@ -14,9 +18,9 @@ Summary: A driver loader for OpenCL
 Current build status
 ====================
 
+[![OSX](https://img.shields.io/travis/conda-forge/khronos-opencl-icd-loader-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/khronos-opencl-icd-loader-feedstock)
 [![Windows](https://img.shields.io/appveyor/ci/conda-forge/khronos-opencl-icd-loader-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/khronos-opencl-icd-loader-feedstock/branch/master)
 ![Linux disabled](https://img.shields.io/badge/linux-disabled-lightgrey.svg)
-![OSX disabled](https://img.shields.io/badge/OSX-disabled-lightgrey.svg)
 
 Current release info
 ====================
@@ -49,6 +53,8 @@ conda search khronos-opencl-icd-loader --channel conda-forge
 
 About conda-forge
 =================
+
+[![Powered by NumFOCUS](https://img.shields.io/badge/powered%20by-NumFOCUS-orange.svg?style=flat&colorA=E1523D&colorB=007D8A)](http://numfocus.org)
 
 conda-forge is a community-led conda channel of installable packages.
 In order to provide high-quality builds, the process has been automated into the
@@ -104,3 +110,10 @@ In order to produce a uniquely identifiable distribution:
  * If the version of a package **is** being increased, please remember to return
    the [``build/number``](https://conda.io/docs/user-guide/tasks/build-packages/define-metadata.html#build-number-and-string)
    back to 0.
+
+Feedstock Maintainers
+=====================
+
+* [@inducer](https://github.com/inducer/)
+* [@isuruf](https://github.com/isuruf/)
+
