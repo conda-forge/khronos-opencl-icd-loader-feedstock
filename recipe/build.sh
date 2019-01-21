@@ -1,7 +1,7 @@
 mkdir build
 cd build
 
-sed -i.bak icd_linux.c 's|/etc/OpenCL/vendors/|$PREFIX/etc/OpenCL/vendors/|g';
+sed -i.bak  "s|/etc/OpenCL/vendors/|$PREFIX/etc/OpenCL/vendors/|g" icd_linux.c;
 
 cmake -DCMAKE_INSTALL_PREFIX=$PREFIX ..
 make -j${CPU_COUNT}
