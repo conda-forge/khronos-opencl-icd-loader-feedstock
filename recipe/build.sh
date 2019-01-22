@@ -8,5 +8,5 @@ make -j${CPU_COUNT}
 make install
 
 if [[ "$(uname)" == "Darwin" ]]; then
-    mv $PREFIX/include/CL $PREFIX/include/OpenCL;
+    ln -s $PREFIX/include/CL $PREFIX/include/OpenCL
 fi
