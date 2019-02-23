@@ -1,12 +1,12 @@
-{% set version = "261c1288aadd9dcc4637aca08332f603e6c13715" %}
-{% set sha256 = "a5d41a9d15da0a9d2967b290bb814bcab3d37db3b99160e030212b2f8afeb134" %}
+{% set version = "44f384ae624675d6b0b92ce39a97cb7f4899d92a" %}
+{% set sha256 = "a8a5b2305f589f315403ca8390ab2ec57acbc99aae4fcabe7bb9632a6b11e89f" %}
 
 {% set headers_version = "03490c3f8cb3b8667942b084a3151de20649f57a" %}
 {% set headers_sha256 = "603e37c8d40a17e279360fa928b990d6b675660f5280af978d0e2014a68ad86d" %}
 
 package:
   name: khronos-opencl-icd-loader
-  version: 2018.11.06
+  version: 2019.02.20
 
 source:
   - url: https://github.com/KhronosGroup/OpenCL-ICD-Loader/archive/{{ version }}.zip
@@ -20,7 +20,7 @@ source:
     folder: inc
 
 build:
-  number: 1003
+  number: 0
 
   # We've got ocl-icd on Linux. No need to use
   # this ... fantastic piece of software ... anywhere else.
@@ -49,8 +49,8 @@ test:
 about:
   home: https://www.khronos.org/registry/cl/
   dev_url: https://github.com/KhronosGroup/OpenCL-ICD-Loader
-  license: Potentially non-free semi-copyleft dumpster fire
-  license_file: LICENSE.txt
+  license: Apache v2.0
+  license_file: LICENSE
   summary: A driver loader for OpenCL
 
 extra:
