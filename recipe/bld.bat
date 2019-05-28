@@ -1,6 +1,8 @@
 mkdir build
 cd build
 
+set "BUILD_CONFIG=Release"
+
 cmake -G "%CMAKE_GENERATOR%" ^
     -DCMAKE_PREFIX_PATH=%LIBRARY_PREFIX% ^
     -DCMAKE_INSTALL_PREFIX:PATH=%LIBRARY_PREFIX% ^
