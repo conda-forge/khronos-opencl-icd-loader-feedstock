@@ -20,7 +20,7 @@ source:
     folder: inc
 
 build:
-  number: 0
+  number: 1
 
   # We've got ocl-icd on Linux. No need to use
   # this ... fantastic piece of software ... anywhere else.
