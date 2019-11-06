@@ -31,7 +31,8 @@ requirements:
     - cmake
     - {{ compiler('c') }}
     - python
-    - make
+    - make   # [not win]
+    - ninja  # [win]
   host:
   run:
 
