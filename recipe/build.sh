@@ -1,4 +1,4 @@
-sed -i.bak  "s|/etc/OpenCL/vendors/|$PREFIX/etc/OpenCL/vendors/|g" icd_linux.c;
+sed -i.bak  "s|/etc/OpenCL/vendors/|$PREFIX/etc/OpenCL/vendors/|g" loader/icd_platform.h;
 
 mkdir build
 cd build
@@ -7,6 +7,9 @@ cmake -DCMAKE_INSTALL_PREFIX=$PREFIX -DCMAKE_BUILD_TYPE=Release ..
 make -j${CPU_COUNT}
 make install
 
-if [[ "$(uname)" == "Darwin" ]]; then
+mkdir -p $PREFIX/include/CL
+cp $SRC_DIR/inc/CL/* $PREFIX/include/CL/
+
+if [[ "${target_platform}" == osx* ]]; then
     ln -s $PREFIX/include/CL $PREFIX/include/OpenCL
 fi
