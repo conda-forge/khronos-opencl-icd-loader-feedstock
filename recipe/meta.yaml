@@ -1,27 +1,25 @@
-{% set version = "261c1288aadd9dcc4637aca08332f603e6c13715" %}
-{% set sha256 = "a5d41a9d15da0a9d2967b290bb814bcab3d37db3b99160e030212b2f8afeb134" %}
+{% set version = "978b4b3a29a3aebc86ce9315d5c5963e88722d03" %}
+{% set sha256 = "6c79fddd59e92182d7bc9048415b51e60e49f952b11eeffd69cccb3081359f78" %}
 
-{% set headers_version = "03490c3f8cb3b8667942b084a3151de20649f57a" %}
-{% set headers_sha256 = "603e37c8d40a17e279360fa928b990d6b675660f5280af978d0e2014a68ad86d" %}
+{% set headers_version = "0d5f18c6e7196863bc1557a693f1509adfcee056" %}
+{% set headers_sha256 = "476bf3611ca3b105565344e75cd3c170ce5961c7c9745181959c9c7f3541eff2" %}
 
 package:
   name: khronos-opencl-icd-loader
-  version: 2018.11.06
+  version: 2019.07.12
 
 source:
   - url: https://github.com/KhronosGroup/OpenCL-ICD-Loader/archive/{{ version }}.zip
     sha256: {{ sha256 }}
-    patches:
-    # Khronos doesn't have an install target in their CMake. Add one.
-    - add-cmake-install.patch
 
   - url: https://github.com/KhronosGroup/OpenCL-Headers/archive/{{ headers_version }}.zip
     sha256: {{ headers_sha256 }}
     folder: inc
 
 build:
-  number: 1003
-
+  number: 1004
+  run_exports:
+    - {{ pin_subpackage("khronos-opencl-icd-loader", max_pin=None) }}
   # We've got ocl-icd on Linux. No need to use
   # this ... fantastic piece of software ... anywhere else.
   # new versions don't support older MSVC
@@ -32,6 +30,7 @@ requirements:
     - cmake
     - {{ compiler('c') }}
     - python
+    - make
   host:
   run:
 
@@ -50,7 +49,7 @@ about:
   home: https://www.khronos.org/registry/cl/
   dev_url: https://github.com/KhronosGroup/OpenCL-ICD-Loader
   license: Potentially non-free semi-copyleft dumpster fire
-  license_file: LICENSE.txt
+  license_file: LICENSE
   summary: A driver loader for OpenCL
 
 extra:
