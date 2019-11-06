@@ -1,13 +1,9 @@
-<!--
-# -*- mode: jinja -*-
--->
-
 About khronos-opencl-icd-loader
 ===============================
 
 Home: https://www.khronos.org/registry/cl/
 
-Package license: Potentially non-free semi-copyleft dumpster fire
+Package license: Apache v2.0
 
 Feedstock license: BSD 3-Clause
 
@@ -18,9 +14,55 @@ Summary: A driver loader for OpenCL
 Current build status
 ====================
 
-[![OSX](https://img.shields.io/travis/conda-forge/khronos-opencl-icd-loader-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/khronos-opencl-icd-loader-feedstock)
-[![Windows](https://img.shields.io/appveyor/ci/conda-forge/khronos-opencl-icd-loader-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/khronos-opencl-icd-loader-feedstock/branch/master)
-![Linux disabled](https://img.shields.io/badge/linux-disabled-lightgrey.svg)
+
+<table><tr>
+    <td>Appveyor</td>
+    <td>
+      <a href="https://ci.appveyor.com/project/conda-forge/khronos-opencl-icd-loader-feedstock/branch/master">
+        <img alt="windows" src="https://img.shields.io/appveyor/ci/conda-forge/khronos-opencl-icd-loader-feedstock/master.svg?label=Windows">
+      </a>
+    </td>
+  </tr>
+    
+  <tr>
+    <td>Azure</td>
+    <td>
+      <details>
+        <summary>
+          <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=502&branchName=master">
+            <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/khronos-opencl-icd-loader-feedstock?branchName=master">
+          </a>
+        </summary>
+        <table>
+          <thead><tr><th>Variant</th><th>Status</th></tr></thead>
+          <tbody><tr>
+              <td>osx</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=502&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/khronos-opencl-icd-loader-feedstock?branchName=master&jobName=osx&configuration=osx_" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>win_c_compilervs2015vc14</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=502&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/khronos-opencl-icd-loader-feedstock?branchName=master&jobName=win&configuration=win_c_compilervs2015vc14" alt="variant">
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </details>
+    </td>
+  </tr>
+  <tr>
+    <td>Linux</td>
+    <td>
+      <img src="https://img.shields.io/badge/linux-disabled-lightgrey.svg" alt="linux disabled">
+    </td>
+  </tr>
+![ppc64le disabled](https://img.shields.io/badge/ppc64le-disabled-lightgrey.svg)
+</table>
 
 Current release info
 ====================

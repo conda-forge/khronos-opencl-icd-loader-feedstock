@@ -3,7 +3,7 @@ sed -i.bak  "s|/etc/OpenCL/vendors/|$PREFIX/etc/OpenCL/vendors/|g" loader/icd_pl
 mkdir build
 cd build
 
-cmake -DCMAKE_INSTALL_PREFIX=$PREFIX ..
+cmake -DCMAKE_INSTALL_PREFIX=$PREFIX -DCMAKE_BUILD_TYPE=Release ..
 make -j${CPU_COUNT}
 make install
 
