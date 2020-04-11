@@ -3,7 +3,7 @@ About khronos-opencl-icd-loader
 
 Home: https://www.khronos.org/registry/cl/
 
-Package license: Apache v2.0
+Package license: Apache-2.0
 
 Feedstock license: BSD 3-Clause
 
@@ -36,10 +36,10 @@ Current build status
                 </a>
               </td>
             </tr><tr>
-              <td>win_c_compilervs2015target_platformwin-64vc14</td>
+              <td>win_target_platformwin-64</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=502&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/khronos-opencl-icd-loader-feedstock?branchName=master&jobName=win&configuration=win_c_compilervs2015target_platformwin-64vc14" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/khronos-opencl-icd-loader-feedstock?branchName=master&jobName=win&configuration=win_target_platformwin-64" alt="variant">
                 </a>
               </td>
             </tr>
