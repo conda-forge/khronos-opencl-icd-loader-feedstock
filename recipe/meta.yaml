@@ -44,6 +44,9 @@ test:
 
     # This crashes with a segfault. Likely for a lack of ICD to talk to.
     # - cd %SRC_DIR%/build && ctest
+  downstreams:
+    # Run the pyopencl test suite on osx
+    - pyopencl   # [osx]
 
 about:
   home: https://www.khronos.org/registry/cl/
