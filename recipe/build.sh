@@ -1,4 +1,4 @@
-sed -i.bak  "s|/etc/OpenCL/vendors/|$PREFIX/etc/OpenCL/vendors/|g" loader/icd_platform.h;
+sed -i.bak  "s|/etc/OpenCL/vendors|$PREFIX/etc/OpenCL/vendors|g" loader/icd_platform.h;
 
 mkdir build
 cd build
