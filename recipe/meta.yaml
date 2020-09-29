@@ -1,4 +1,5 @@
 {% set version = "2020.06.16" %}
+{% set build = 2 %}
 {% set sha256 = "e4c27a5adcef4dbc0fee98864af203dc78dfc967ca7287c9bad9add030e7516e" %}
 {% set headers_sha256 = "518703d3c3a6333bcf8e4f80758e4e98f7af30fbd72a09fe8c2673da1628d80c" %}
 
@@ -15,7 +16,8 @@ source:
     folder: inc
 
 build:
-  number: 1
+  number: {{ build }}
+  string: "ocl-{{ variant }}_h{{ PKG_HASH }}_{{ build }}"
   run_exports:
     - {{ pin_subpackage("khronos-opencl-icd-loader", max_pin=None) }}
 
@@ -23,6 +25,7 @@ build:
   # this ... fantastic piece of software ... anywhere else.
   # new versions don't support older MSVC
   skip: true  # [linux or (win and vc<14)]
+  track_features: true  # [variant == "system-only"]
 
 requirements:
   build:
@@ -31,8 +34,6 @@ requirements:
     - python
     - make   # [not win]
     - ninja  # [win]
-  host:
-  run:
 
 test:
   commands:
@@ -56,3 +57,4 @@ extra:
   recipe-maintainers:
     - inducer
     - isuruf
+    - scopatz

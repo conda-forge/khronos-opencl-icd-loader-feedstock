@@ -5,7 +5,7 @@ Home: https://www.khronos.org/registry/cl/
 
 Package license: Apache-2.0
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: A driver loader for OpenCL
 
@@ -29,35 +29,37 @@ Current build status
         <table>
           <thead><tr><th>Variant</th><th>Status</th></tr></thead>
           <tbody><tr>
-              <td>osx_target_platformosx-64</td>
+              <td>osx_64_target_platformosx-64variantconda</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=502&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/khronos-opencl-icd-loader-feedstock?branchName=master&jobName=osx&configuration=osx_target_platformosx-64" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/khronos-opencl-icd-loader-feedstock?branchName=master&jobName=osx&configuration=osx_64_target_platformosx-64variantconda" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>win_target_platformwin-64</td>
+              <td>osx_64_target_platformosx-64variantsystem-only</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=502&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/khronos-opencl-icd-loader-feedstock?branchName=master&jobName=win&configuration=win_target_platformwin-64" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/khronos-opencl-icd-loader-feedstock?branchName=master&jobName=osx&configuration=osx_64_target_platformosx-64variantsystem-only" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>win_64_target_platformwin-64variantconda</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=502&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/khronos-opencl-icd-loader-feedstock?branchName=master&jobName=win&configuration=win_64_target_platformwin-64variantconda" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>win_64_target_platformwin-64variantsystem-only</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=502&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/khronos-opencl-icd-loader-feedstock?branchName=master&jobName=win&configuration=win_64_target_platformwin-64variantsystem-only" alt="variant">
                 </a>
               </td>
             </tr>
           </tbody>
         </table>
       </details>
-    </td>
-  </tr>
-  <tr>
-    <td>Linux</td>
-    <td>
-      <img src="https://img.shields.io/badge/linux-disabled-lightgrey.svg" alt="linux disabled">
-    </td>
-  </tr>
-  <tr>
-    <td>Linux_ppc64le</td>
-    <td>
-      <img src="https://img.shields.io/badge/ppc64le-disabled-lightgrey.svg" alt="ppc64le disabled">
     </td>
   </tr>
 </table>
@@ -156,4 +158,5 @@ Feedstock Maintainers
 
 * [@inducer](https://github.com/inducer/)
 * [@isuruf](https://github.com/isuruf/)
+* [@scopatz](https://github.com/scopatz/)
 

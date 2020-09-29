@@ -1,4 +1,6 @@
-sed -i.bak  "s|/etc/OpenCL/vendors|$PREFIX/etc/OpenCL/vendors|g" loader/icd_platform.h;
+if [[ "${variant}" != "system-only" ]]
+  sed -i.bak  "s|/etc/OpenCL/vendors|$PREFIX/etc/OpenCL/vendors|g" loader/icd_platform.h;
+fi
 
 mkdir build
 cd build
