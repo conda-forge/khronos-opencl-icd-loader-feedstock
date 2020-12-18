@@ -1,6 +1,6 @@
 {% set version = "2020.12.18" %}
-{% set sha256 = "10c0d3b9baabd3ce76993f4836a35bed8b45126196101541fdea78e7f3752e2a" %}
-{% set headers_sha256 = "518703d3c3a6333bcf8e4f80758e4e98f7af30fbd72a09fe8c2673da1628d80c" %}
+{% set sha256 = "559648e4d9f72b68f3800d3938ce2e6b910bd0eb85e53049c5898f59906e1240" %}
+{% set headers_sha256 = "5dad6d436c0d7646ef62a39ef6cd1f3eba0a98fc9157808dfc1d808f3705ebc2" %}
 
 package:
   name: khronos-opencl-icd-loader
