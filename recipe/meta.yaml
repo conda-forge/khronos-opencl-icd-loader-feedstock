@@ -1,5 +1,5 @@
-{% set version = "2020.06.16" %}
-{% set sha256 = "e4c27a5adcef4dbc0fee98864af203dc78dfc967ca7287c9bad9add030e7516e" %}
+{% set version = "2020.12.18" %}
+{% set sha256 = "10c0d3b9baabd3ce76993f4836a35bed8b45126196101541fdea78e7f3752e2a" %}
 {% set headers_sha256 = "518703d3c3a6333bcf8e4f80758e4e98f7af30fbd72a09fe8c2673da1628d80c" %}
 
 package:
@@ -15,7 +15,7 @@ source:
     folder: inc
 
 build:
-  number: 1
+  number: 0
   run_exports:
     - {{ pin_subpackage("khronos-opencl-icd-loader", max_pin=None) }}
 
