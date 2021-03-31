@@ -9,13 +9,15 @@ package:
 source:
   - url: https://github.com/KhronosGroup/OpenCL-ICD-Loader/archive/v{{ version }}.zip
     sha256: {{ sha256 }}
+    patches:
+      - no_check_integrity_win.patch
 
   - url: https://github.com/KhronosGroup/OpenCL-Headers/archive/v{{ version }}.zip
     sha256: {{ headers_sha256 }}
     folder: inc
 
 build:
-  number: 0
+  number: 1
   run_exports:
     - {{ pin_subpackage("khronos-opencl-icd-loader", max_pin=None) }}
 
