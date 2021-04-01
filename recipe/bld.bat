@@ -32,3 +32,6 @@ for %%F in (activate deactivate) DO (
     if not exist %PREFIX%\etc\conda\%%F.d mkdir %PREFIX%\etc\conda\%%F.d
     copy %RECIPE_DIR%\%%F.bat %PREFIX%\etc\conda\%%F.d\%PKG_NAME%_%%F.bat
 )
+
+mkdir %LIBRARY_PREFIX%\etc\OpenCL\vendors
+copy %RECIPE_DIR%\opencl-helper.bat %LIBRARY_PREFIX%\etc\OpenCL\vendors\opencl-helper.bat
