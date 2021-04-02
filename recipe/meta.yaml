@@ -19,8 +19,8 @@ build:
   run_exports:
     - {{ pin_subpackage("khronos-opencl-icd-loader", max_pin=None) }}
 
-  # We've got ocl-icd on Linux. No need to use
-  # this ... fantastic piece of software ... anywhere else.
+  # We've got ocl-icd on Linux which has better debugging support
+  # and was used before khronos adopted an open source license.
   # new versions don't support older MSVC
   skip: true  # [linux or (win and vc<14)]
 
@@ -45,8 +45,8 @@ test:
     # This crashes with a segfault. Likely for a lack of ICD to talk to.
     # - cd %SRC_DIR%/build && ctest
   downstreams:
-    # Run the pyopencl test suite on osx
-    - pyopencl   # [osx]
+    # Run the pyopencl test suite
+    - pyopencl
 
 about:
   home: https://www.khronos.org/registry/cl/
