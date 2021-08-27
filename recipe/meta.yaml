@@ -17,7 +17,7 @@ source:
     folder: inc
 
 build:
-  number: 0
+  number: 1
   run_exports:
     - {{ pin_subpackage("khronos-opencl-icd-loader", max_pin=None) }}
 
