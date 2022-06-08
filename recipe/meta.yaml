@@ -1,13 +1,13 @@
-{% set version = "2022.01.04" %}
-{% set sha256 = "960816657765c37fd3a01748a9d6afdfad637237ed4082c5b0744eb87e9a5085" %}
-{% set headers_sha256 = "8fa799b2c3fdc8702eadb10171eca5c4a6af42b7844301300b5332607c13b6ff" %}
+{% set version = "2022.05.18" %}
+{% set sha256 = "df66da015f5cc09d89ae8a4cd232e543f3a22de7ed22c46d2c1f6e807ff4912a" %}
+{% set headers_sha256 = "ae6b9ec7fca8bea9969a90a1737d6cbaa5a2cb93215a07d770cb9479e8b18220" %}
 
 package:
   name: khronos-opencl-icd-loader
   version: {{ version }}
 
 source:
-  - url: https://github.com/KhronosGroup/OpenCL-ICD-Loader/archive/v{{ version }}.zip
+  - url: https://github.com/KhronosGroup/OpenCL-ICD-Loader/archive/refs/tags/v{{ version }}.zip
     sha256: {{ sha256 }}
     patches:
       - no_check_integrity_win.patch
