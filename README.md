@@ -1,11 +1,11 @@
-About khronos-opencl-icd-loader
-===============================
+About khronos-opencl-icd-loader-feedstock
+=========================================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/khronos-opencl-icd-loader-feedstock/blob/main/LICENSE.txt)
 
 Home: https://www.khronos.org/registry/cl/
 
 Package license: Apache-2.0
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/khronos-opencl-icd-loader-feedstock/blob/main/LICENSE.txt)
 
 Summary: A driver loader for OpenCL
 
