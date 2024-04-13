@@ -15,7 +15,7 @@ source:
     folder: inc
 
 build:
-  number: 0
+  number: 1
   run_exports:
     - {{ pin_subpackage("khronos-opencl-icd-loader", max_pin=None) }}
 
@@ -28,6 +28,7 @@ requirements:
   build:
     - cmake
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - python
     - make   # [not win]
     - ninja  # [win]
