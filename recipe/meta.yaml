@@ -1,4 +1,4 @@
-{% set version = "2023.04.17" %}
+{% set version = "2024.05.08" %}
 
 package:
   name: khronos-opencl-icd-loader
@@ -6,12 +6,12 @@ package:
 
 source:
   - url: https://github.com/KhronosGroup/OpenCL-ICD-Loader/archive/refs/tags/v{{ version }}.zip
-    sha256: 53d33bf629f145e7fded56d7fd9dde3aa85f9e0573171d777464e092f04bbf31
+    sha256: 3326b81cd47829a8b738465944674e94332b55d988e12bbb760f54d71a0ac9a6
     patches:
       - no_check_integrity_win.patch
 
   - url: https://github.com/KhronosGroup/OpenCL-Headers/archive/v{{ version }}.zip
-    sha256: 68dc80a943fdfc760abc15d36ff301e54ebb326e643169ec63c459827b4fbb4d
+    sha256: 83296f08e670d8f52c94972587f22ad8cbbb1383aa00b11f376a9c01686bf399
     folder: inc
 
 build:
@@ -28,6 +28,7 @@ requirements:
   build:
     - cmake
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - python
     - make   # [not win]
     - ninja  # [win]
