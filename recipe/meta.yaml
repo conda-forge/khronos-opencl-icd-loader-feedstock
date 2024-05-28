@@ -28,6 +28,7 @@ requirements:
   build:
     - cmake
     - {{ compiler('c') }}
+    - {{ stdlib('c') }}
     - python
     - make   # [not win]
     - ninja  # [win]
