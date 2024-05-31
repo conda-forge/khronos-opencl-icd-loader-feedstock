@@ -2,7 +2,7 @@
 
 set "OCL_ICD_FILENAMES_CONDA_BACKUP=%OCL_ICD_FILENAMES%"
 
-start /wait cmd.exe /c "%CONDA_PREFIX%\Library\etc\OpenCL\vendors\opencl-helper.bat"
+start /wait /b cmd.exe /c "%CONDA_PREFIX%\Library\etc\OpenCL\vendors\opencl-helper.bat"
 
 set /p OCL_ICD_FILENAMES_NEW=<%CONDA_PREFIX%\Library\etc\OpenCL\vendors\temp.txt
 set "OCL_ICD_FILENAMES=%OCL_ICD_FILENAMES%%OCL_ICD_FILENAMES_NEW%"
