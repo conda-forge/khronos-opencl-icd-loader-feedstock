@@ -1,0 +1,26 @@
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: Ryan Volz <ryan.volz@gmail.com>
+Date: Fri, 21 Apr 2023 11:52:29 -0400
+Subject: [PATCH] Create versioned DLL on Windows, OpenCL-1.dll instead of
+ OpenCL.dll.
+
+---
+ CMakeLists.txt | 2 ++
+ 1 file changed, 2 insertions(+)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 567ceee..c834205 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -124,6 +124,8 @@ set_target_properties (OpenCL PROPERTIES VERSION "1.2" SOVERSION "1")
+ if (WIN32)
+     target_link_libraries (OpenCL PRIVATE cfgmgr32.lib runtimeobject.lib)
+ 
++    set_target_properties (OpenCL PROPERTIES RUNTIME_OUTPUT_NAME "OpenCL-${PROJECT_VERSION_MAJOR}")
++
+     # Generate a DLL without a "lib" prefix for mingw.
+     if (MINGW OR MSYS OR CYGWIN)
+         set_target_properties(OpenCL PROPERTIES PREFIX "")
+-- 
+2.40.0
+
