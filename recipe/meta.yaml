@@ -10,19 +10,14 @@ source:
     patches:
       - no_check_integrity_win.patch
 
-  - url: https://github.com/KhronosGroup/OpenCL-Headers/archive/v{{ version }}.zip
-    sha256: d6a6462588b913cbcd91e4ddc5cd85c53dcf59099e9a2962624fcf345896ea9b
-    folder: inc
-
 build:
-  number: 0
+  number: 1
   run_exports:
     - {{ pin_subpackage("khronos-opencl-icd-loader", max_pin=None) }}
 
   # We've got ocl-icd on Linux which has better debugging support
   # and was used before khronos adopted an open source license.
-  # new versions don't support older MSVC
-  skip: true  # [linux or (win and vc<14)]
+  skip: true  # [linux]
 
 requirements:
   build:
@@ -33,21 +28,35 @@ requirements:
     - make   # [not win]
     - ninja  # [win]
   host:
+    - opencl-headers
   run:
+    - {{ pin_compatible("opencl-headers", max_pin=None) }}
 
 test:
+  requires:
+    - pkg-config
   commands:
     - if not exist %LIBRARY_INC%\\CL\\cl.h exit 1       # [win]
     - if not exist %LIBRARY_BIN%\\OpenCL.dll exit 1     # [win]
     - test -f $PREFIX/include/OpenCL/cl.h               # [osx]
     - test -f $PREFIX/include/CL/cl.h                   # [linux]
     - test -f $PREFIX/lib/libOpenCL${SHLIB_EXT}         # [unix]
-
-    # This crashes with a segfault. Likely for a lack of ICD to talk to.
-    # - cd %SRC_DIR%/build && ctest
+    - pkg-config OpenCL --libs --cflags
   downstreams:
     # Run the pyopencl test suite
     - pyopencl
+
+outputs:
+  - name: khronos-opencl-icd-loader
+
+  - name: libopencl-devel
+    version: 3.0.{{ version }}
+    build:
+      run_exports:
+        - {{ pin_subpackage("khronos-opencl-icd-loader", max_pin=None) }}
+    requirements:
+      run:
+        - khronos-opencl-icd-loader
 
 about:
   home: https://www.khronos.org/registry/cl/
