@@ -9,6 +9,7 @@ source:
     sha256: 53d6dce5cb6d29da590ca7c50e8c26afbb4f261b48a90253142f8a93b3c4625d
     patches:
       - no_check_integrity_win.patch
+      - 0001-Create-versioned-DLL-on-Windows-OpenCL-1.dll-instead.patch
 
 build:
   number: 1
@@ -37,7 +38,8 @@ test:
     - pkg-config
   commands:
     - if not exist %LIBRARY_INC%\\CL\\cl.h exit 1       # [win]
-    - if not exist %LIBRARY_BIN%\\OpenCL.dll exit 1     # [win]
+    - if not exist %LIBRARY_BIN%\\OpenCL-1.dll exit 1   # [win]
+    - if not exist %LIBRARY_LIB%\\OpenCL.lib exit 1     # [win]
     - test -f $PREFIX/include/OpenCL/cl.h               # [osx]
     - test -f $PREFIX/include/CL/cl.h                   # [linux]
     - test -f $PREFIX/lib/libOpenCL${SHLIB_EXT}         # [unix]
