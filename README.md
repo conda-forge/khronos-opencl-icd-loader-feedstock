@@ -63,6 +63,7 @@ Current release info
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-khronos--opencl--icd--loader-green.svg)](https://anaconda.org/conda-forge/khronos-opencl-icd-loader) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/khronos-opencl-icd-loader.svg)](https://anaconda.org/conda-forge/khronos-opencl-icd-loader) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/khronos-opencl-icd-loader.svg)](https://anaconda.org/conda-forge/khronos-opencl-icd-loader) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/khronos-opencl-icd-loader.svg)](https://anaconda.org/conda-forge/khronos-opencl-icd-loader) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-libopencl--devel-green.svg)](https://anaconda.org/conda-forge/libopencl-devel) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/libopencl-devel.svg)](https://anaconda.org/conda-forge/libopencl-devel) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/libopencl-devel.svg)](https://anaconda.org/conda-forge/libopencl-devel) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/libopencl-devel.svg)](https://anaconda.org/conda-forge/libopencl-devel) |
 
 Installing khronos-opencl-icd-loader
 ====================================
@@ -74,16 +75,16 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `khronos-opencl-icd-loader` can be installed with `conda`:
+Once the `conda-forge` channel has been enabled, `khronos-opencl-icd-loader, libopencl-devel` can be installed with `conda`:
 
 ```
-conda install khronos-opencl-icd-loader
+conda install khronos-opencl-icd-loader libopencl-devel
 ```
 
 or with `mamba`:
 
 ```
-mamba install khronos-opencl-icd-loader
+mamba install khronos-opencl-icd-loader libopencl-devel
 ```
 
 It is possible to list all of the versions of `khronos-opencl-icd-loader` available on your platform with `conda`:
