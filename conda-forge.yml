@@ -8,5 +8,5 @@ github:
   branch_name: main
   tooling_branch_name: main
 provider:
-  win: azure
+  win: default
 test: native_and_emulated
