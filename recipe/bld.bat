@@ -5,7 +5,7 @@ cd build
 
 set "BUILD_CONFIG=Release"
 
-cmake -G "Ninja" ^
+cmake %CMAKE_ARGS% -G "Ninja" ^
     -DCMAKE_PREFIX_PATH=%LIBRARY_PREFIX% ^
     -DCMAKE_INSTALL_PREFIX:PATH=%LIBRARY_PREFIX% ^
     -DCMAKE_BUILD_TYPE=%BUILD_CONFIG% ^
